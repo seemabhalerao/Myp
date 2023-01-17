@@ -1,0 +1,14 @@
+#save{
+    padding: 20px;
+    border: 0px;
+    border-radius: 25px;
+    box-shadow: 5px 10px 15px black;
+    background-color: bisque(236,234,234);
+}
+#table{
+    padding: 20px;
+    border: 0px;
+    border-radius: 25px;
+    background-color: bisque(236,234,234);
+
+}

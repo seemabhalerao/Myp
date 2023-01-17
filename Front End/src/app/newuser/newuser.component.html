@@ -1,0 +1,45 @@
+<div class="container m-15 mt-10 col-10 " id="save" >
+    <h1 class="text-center">Admin Details</h1><br>
+    <form>
+     
+     <div class="row mb-3">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Full Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control"  [(ngModel)]="admin_name" [ngModelOptions]="{standalone: true}">
+      </div>
+   </div>
+   <div class="row mb-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label" >Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" [(ngModel)]="admin_email" [ngModelOptions]="{standalone: true}">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label" >Phone No.</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="admin_phone" [ngModelOptions]="{standalone: true}">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label" >Address</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="admin_address" [ngModelOptions]="{standalone: true}">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label"  >Username</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="username" [ngModelOptions]="{standalone: true}">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label"  >Password</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="admin_pass" [ngModelOptions]="{standalone: true}">
+    </div>
+  </div><br>
+    <div class="text-center">
+      <button type="submit" class="btn btn-info" (click)="save()">Submit</button>
+    </div>
+     
+    </form></div>
