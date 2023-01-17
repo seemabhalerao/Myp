@@ -1,0 +1,75 @@
+<div class="container m-15 mt-10 col-10 " id="save" >
+    <h1 class="text-center">Student Details</h1><br>
+    <form>
+     
+     <div class="row mb-3">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Full Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control"  [(ngModel)]="student_name" [ngModelOptions]="{standalone: true}">
+      </div>
+   </div>
+   
+  <div class="row mb-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label" >Phone No.</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="student_phone_no" [ngModelOptions]="{standalone: true}">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label" >Address</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="student_address" [ngModelOptions]="{standalone: true}">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label" >Batch</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="student_batch" [ngModelOptions]="{standalone: true}">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label"  >Course</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="student_course" [ngModelOptions]="{standalone: true}">
+    </div>
+  </div><br>
+    <div class="text-center">
+      <button type="submit" class="btn btn-info" (click)="put(student_id)">Submit</button>
+    </div>
+     
+    </form></div>
+    <br>
+    <br>
+  
+  <div class="container" id="table" >
+  <table class="table">
+      <thead>
+        <tr>
+          
+          <th >Student Id</th>
+          <th >Name</th>
+          <th >Address</th>
+          <th>Phone no</th>
+          <th>Batch</th>
+          <th>Course</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let add of Array">
+         
+          <td>{{add.student_id}}</td>
+          <td>{{add.student_name}}</td>
+          <td>{{add.student_address}}</td>
+          <td>{{add.student_phone_no}}</td>
+          <td>{{add.student_batch}}</td>
+          <td>{{add.student_course}}</td>
+          <td>
+            <button class="btn btn-success m-2" (click)="update(add)">Update</button>
+            <button class="btn btn-danger m-2" (click)="deletestudent(add.student_id)">Delete</button>
+          </td>
+        </tr>
+       
+      </tbody>
+    </table></div>
+  
